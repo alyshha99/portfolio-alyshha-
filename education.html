@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio | Education</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Link Font Berangkai (Great Vibes) dari Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Style mengikut rujukan W3Schools */
+        .search-container-bar {
+            display: flex;
+            justify-content: flex-end;
+            max-width: 950px;
+            margin: 0 auto 10px auto;
+            padding-right: 15px;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background-color: #fcf8f6;
+            border: 2px solid #f8d7da;
+            border-radius: 20px;
+            padding: 3px 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .search-input {
+            border: none;
+            background: transparent;
+            outline: none;
+            padding: 4px 8px;
+            font-size: 12px;
+            color: #3e2723;
+            font-family: inherit;
+            width: 130px;
+        }
+
+        .search-input::placeholder {
+            color: #a08c87;
+            font-size: 11px;
+        }
+
+        .search-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #3e2723;
+            font-size: 13px;
+            padding: 0 4px;
+        }
+
+        /* Styling Jadual & Senarai (W3Schools Table & List Layout) */
+        table.edu-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-family: 'Montserrat', sans-serif;
+            color: #3e2723;
+        }
+
+        table.edu-table th, table.edu-table td {
+            border: 1px solid #f8d7da;
+            padding: 12px;
+            text-align: left;
+        }
+
+        table.edu-table th {
+            background-color: #f8d7da;
+            color: #3e2723;
+            font-weight: bold;
+        }
+
+        ul.skills-list {
+            list-style-type: square;
+            padding-left: 20px;
+            color: #3e2723;
+        }
+
+        .back-to-top {
+            display: inline-block;
+            margin-top: 25px;
+            color: #3e2723;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body id="top">
+
+    <!-- Header & Navigation Bar (Kekal konsisten dengan index.html) -->
+    <header style="display: flex; justify-content: space-between; align-items: center;">
+        
+        <!-- Tajuk Utama -->
+        <h1 style="font-family: 'Great Vibes', cursive; font-size: 38px; font-weight: normal; margin: 0; text-transform: none;">alyshha's space</h1>
+
+        <!-- Paparan Tarikh & Jam -->
+        <div style="font-family: inherit; font-size: 13px; font-weight: bold; color: #3e2723; text-transform: uppercase; margin-top: 10px;">
+            🗓️ <span id="tarikh"></span> | ⏳ <span id="jam"></span>
+        </div>
+
+        <!-- Menu Navigasi -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="biodata.html">Biodata</a></li>
+                <li><a href="education.html" class="active">Education</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="family.html">Family</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Layout -->
+    <main>
+        <!-- Search Engine (Berada tepat di bawah header) -->
+        <div class="search-container-bar">
+            <form onsubmit="cariSection(event)" class="search-box">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search section..." required>
+                <button type="submit" class="search-btn">🔍</button>
+            </form>
+        </div>
+
+        <!-- Kad Utama Kandungan Education -->
+        <div class="hero-card" style="display: block; max-width: 850px; margin: 20px auto; padding: 30px;">
+            
+            <h2 style="font-family: 'Montserrat', sans-serif; color: #3e2723; text-align: center; margin-bottom: 20px; font-size: 28px;">Educational Background</h2>
+
+            <!-- Paragraph & Text Formatting (Rubrik Item 1) -->
+            <p style="text-align: center; color: #3e2723; margin-bottom: 25px;">
+                Here is a summary of my academic journey from primary education to my current tertiary studies at <abbr title="Universiti Teknologi MARA">UiTM</abbr>.
+            </p>
+
+            <!-- HTML Table untuk Sejarah Pendidikan (Rubrik Item 5) -->
+            <table class="edu-table">
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Level of Education</th>
+                        <th>Institution / School</th>
+                        <th>Achievement / Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024 - Present</td>
+                        <td>Diploma in Information Management (IMD318)</td>
+                        <td><abbr title="Universiti Teknologi MARA">UiTM</abbr> Kampus Machang</td>
+                        <td>Ongoing (Current <b style="color: #3e2723;">3<sup>rd</sup> Semester</b>)</td>
+                    </tr>
+                    <tr>
+                        <td>2019 - 2023</td>
+                        <td>Sijil Pelajaran Malaysia (<abbr title="Sijil Pelajaran Malaysia">SPM</abbr>)</td>
+                        <td>[Nama Sekolah Menengah Anda]</td>
+                        <td><i>[Contoh: Passed with Honours / Credit in Science (H<sub>2</sub>O Studies)]</i></td>
+                    </tr>
+                    <tr>
+                        <td>2013 - 2018</td>
+                        <td>Primary School Education</td>
+                        <td>[Nama Sekolah Rendah Anda]</td>
+                        <td>Completed 6<sup>th</sup> Grade</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <hr style="margin: 30px 0; border: 0; border-top: 1px solid #f8d7da;">
+
+            <!-- Ordered List: Akademik Chronology (Rubrik Item 4) -->
+            <h3 style="color: #3e2723; margin-bottom: 10px;">Academic Milestones (<ol> Tag Style)</h3>
+            <ol style="color: #3e2723; font-family: 'Montserrat', sans-serif; padding-left: 20px; line-height: 1.8;">
+                <li>Enrolled in Diploma of Web Content Management & Design (IMD318).</li>
+                <li>Completed core modules in Information Science and Programming Principles.</li>
+                <li>Participated in various academic workshops and soft skill seminars.</li>
+            </ol>
+
+            <br>
+
+            <!-- Unordered List: Relevant Courses / Modules (Rubrik Item 4) -->
+            <h3 style="color: #3e2723; margin-bottom: 10px;">Key Subjects Studied (<ul> Custom Marker Style)</h3>
+            <ul class="skills-list">
+                <li>IMD318 - Introduction to Web Content Management & Design</li>
+                <li>Database Application for Information Agencies</li>
+                <li>Management of Internet Resources & Digital Media</li>
+            </ul>
+
+            <!-- Anchor Link ke Atas (Rubrik Item 3) -->
+            <div style="text-align: center;">
+                <a href="#top" class="back-to-top">⬆️ Back to Top</a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Sticky Social Bar (W3Schools Style - Left Side) -->
+<div class="icon-bar">
+    <a href="https://www.instagram.com/_.alyshha" target="_blank" class="instagram" title="Follow Instagram">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram">
+    </a>
+    <a href="https://www.tiktok.com/@_alyshae" target="_blank" class="tiktok" title="Follow TikTok">
+        <img src="images/logo-tiktok.png" alt="TikTok">
+    </a>
+</div>
+
+<!-- Footer / Statement of Ownership -->
+<footer style="text-align: center; padding: 25px 0;">
+    <p>&copy; 2026 PORTFOLIO ALISS ALISHA . All Rights Reserved.</p>
+    <p><small>Last Updated: October 2026</small></p>
+</footer>
+
+    <!-- Script JavaScript untuk Jam, Tarikh & Search Engine -->
+    <script>
+        function kemaskiniMasa() {
+            const masaSekarang = new Date();
+            const pilihanTarikh = { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' };
+            const tarikhFormat = masaSekarang.toLocaleDateString('en-US', pilihanTarikh);
+            const jamFormat = masaSekarang.toLocaleTimeString('en-US', {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true
+            });
+
+            document.getElementById('tarikh').innerText = tarikhFormat;
+            document.getElementById('jam').innerText = jamFormat;
+        }
+
+        kemaskiniMasa();
+        setInterval(kemaskiniMasa, 1000);
+
+        function cariSection(event) {
+            event.preventDefault();
+            const query = document.getElementById('searchInput').value.toLowerCase().trim();
+
+            if (query.includes('bio') || query.includes('about')) {
+                window.location.href = 'biodata.html';
+            } else if (query.includes('edu') || query.includes('school') || query.includes('study')) {
+                window.location.href = 'education.html';
+            } else if (query.includes('exp') || query.includes('work')) {
+                window.location.href = 'experience.html';
+            } else if (query.includes('fam')) {
+                window.location.href = 'family.html';
+            } else if (query.includes('gal') || query.includes('photo') || query.includes('picture')) {
+                window.location.href = 'gallery.html';
+            } else if (query.includes('home')) {
+                window.location.href = 'index.html';
+            } else {
+                alert('Section not found! Try searching for: biodata, education, experience, family, or gallery.');
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+/* Animasi Header W3Schools CSS Animations */
+.animated-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 38px;
+    font-weight: normal;
+    margin: 0;
+    text-transform: none;
+    color: #3e2723;
+    display: inline-block;
+    
+    /* Panggil Animasi @keyframes */
+    animation: fadeInSlide 1.5s ease-in-out;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Kesan Hover (Berdenyut & Berubah Warna Lembut) */
+.animated-title:hover {
+    transform: scale(1.05);
+    color: #8D5B4C;
+}
+
+/* Definition @keyframes W3Schools */
+@keyframes fadeInSlide {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

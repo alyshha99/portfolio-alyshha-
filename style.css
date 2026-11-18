@@ -1,0 +1,244 @@
+/* Import Google Fonts (Classic & Aesthetic Serif/Sans-Serif) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Poppins:wght@300;400;500&display=swap');
+
+:root {
+    --dark-brown: #3E2723;
+    --soft-pink: #F4C9D6;
+    --cream-white: #FAF6F0;
+    --card-border: #D7B8C0;
+}
+
+/* Base Layout & Striped Background Inspired by Image 2 */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--dark-brown);
+    background-color: var(--soft-pink);
+    /* Vertical Stripes Pattern using Dark Brown & Soft Pink */
+    background-image: repeating-linear-gradient(
+        90deg,
+        var(--soft-pink),
+        var(--soft-pink) 25px,
+        var(--dark-brown) 25px,
+        var(--dark-brown) 50px
+    );
+    min-height: 100vh;
+}
+
+/* Header & Navigation Bar Style */
+header {
+    background-color: var(--cream-white);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--dark-brown);
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin: 0;
+    color: var(--dark-brown);
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--dark-brown);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: var(--soft-pink);
+    color: var(--dark-brown);
+}
+
+/* Hero Section / Card Layout Inspired by Image 2 */
+main {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.hero-card {
+    background-color: var(--cream-white);
+    border: 3px double var(--dark-brown);
+    padding: 30px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(62, 39, 35, 0.3);
+}
+
+.hero-image {
+    width: 45%;
+    height: 380px;
+    object-fit: cover;
+    border: 1px solid var(--dark-brown);
+}
+
+.hero-content {
+    width: 55%;
+    text-align: center;
+    padding: 10px;
+}
+
+.hero-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-style: italic;
+    color: var(--dark-brown);
+    margin-bottom: 10px;
+}
+
+.hero-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dark-brown);
+    margin-top: 0;
+    border-bottom: 1px solid var(--dark-brown);
+    padding-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--dark-brown);
+    margin: 20px 0;
+}
+.datetime-display {
+    color: #3e2723; /* Warna Dark Brown */
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+/* Table Styling for Biodata & Details */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: var(--cream-white);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid var(--dark-brown);
+    color: var(--dark-brown);
+}
+
+th {
+    background-color: var(--soft-pink);
+    font-family: 'Playfair Display', serif;
+}
+/* Sticky Social Bar Style (W3Schools Reference - Belah Kiri) */
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  left: 0px; /* Melekat di bahagian KIRI skrin */
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-bar a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  padding: 8px;
+  transition: all 0.3s ease;
+  color: white;
+  margin-bottom: 5px;
+  border-top-right-radius: 8px;   /* Lengkok di sebelah kanan */
+  border-bottom-right-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Warna Latar Belakang Ikon Media Sosial */
+.icon-bar a.instagram {
+  background: #E1306C;
+}
+
+.icon-bar a.tiktok {
+  background: #000000;
+}
+
+/* Kesan Hover W3Schools (Memanjang sedikit ke kanan bila tetikus lalu) */
+.icon-bar a:hover {
+  width: 55px;
+}
+
+.icon-bar img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Footer Section */
+footer {
+    background-color: var(--cream-white);
+    text-align: center;
+    padding: 15px;
+    border-top: 2px solid var(--dark-brown);
+    color: var(--dark-brown);
+    font-size: 0.85rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+/* Animasi Header W3Schools CSS Animations */
+.animated-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 38px;
+    font-weight: normal;
+    margin: 0;
+    text-transform: none;
+    color: #3e2723;
+    display: inline-block;
+    
+    /* Panggil Animasi @keyframes */
+    animation: fadeInSlide 1.5s ease-in-out;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Kesan Hover (Berdenyut & Berubah Warna Lembut) */
+.animated-title:hover {
+    transform: scale(1.05);
+    color: #8D5B4C;
+}
+
+/* Definition @keyframes W3Schools */
+@keyframes fadeInSlide {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

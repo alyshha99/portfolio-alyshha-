@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | Alyshha's Portfolio</title>
+
+    <!-- Google Fonts: Cinzel & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Latar Belakang Polka Dot */
+        body {
+            background-color: #3E2723;
+            background-image: url('images/reben-lace.png');
+            background-repeat: repeat;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Montserrat', sans-serif;
+            padding: 20px;
+        }
+
+        /* Bekas Utama */
+        .landing-container {
+            width: 100%;
+            max-width: 820px; /* Dikecilkan sedikit dari 950px supaya gambar lebih terkawal di tengah */
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        /* Bingkai Gambar Banner (Dikecilkan tinggi & ke tengah) */
+        .banner-container {
+            width: 75%; /* Mengecilkan lebar gambar supaya tidak terlebar melebihi corak lace */
+            height: 250px; /* Dikurangkan tingginya dari 420px */
+            margin: 0 auto 20px auto; /* Ditengahkan secara automatik */
+            overflow: hidden;
+            border-radius: 4px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .banner-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 20%;
+            display: block;
+        }
+
+        /* Hyperlink pada perkataan PORTFOLIO */
+        .portfolio-link {
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px; /* Menambah ruang atas supaya teks PORTFOLIO turun ke bawah sikit */
+        }
+
+        /* Teks PORTFOLIO (Align di ruang dark brown) */
+        .portfolio-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(3rem, 7vw, 5.5rem); /* Saiz teks disesuaikan sedikit */
+            font-weight: 700;
+            color: #F4C9D6; /* Soft Pink */
+            letter-spacing: 6px;
+            line-height: 1;
+            margin-bottom: 25px; /* Menambah ruang bawah ke garisan footer */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        /* Kesan Tetikus Diletakkan Pada Teks PORTFOLIO */
+        .portfolio-link:hover .portfolio-title {
+            transform: scale(1.02);
+            opacity: 0.9;
+        }
+
+        /* Bahagian Teks Bawah */
+        .footer-credits {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            font-weight: 600;
+            color: #F4C9D6; /* Soft Pink */
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding-top: 15px;
+            border-top: 1px solid rgba(244, 201, 214, 0.4);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="landing-container">
+        <!-- Gambar Banner Melintang (Landscape) -->
+        <div class="banner-container">
+            <img src="images/profile.png" alt="Alyshha Portfolio Banner">
+        </div>
+
+        <!-- Hyperlink Teks PORTFOLIO ke Homepage (index.html) -->
+        <a href="index.html" class="portfolio-link">
+            <h1 class="portfolio-title">PORTFOLIO</h1>
+        </a>
+
+        <!-- Teks Kiri & Kanan Bawah -->
+        <div class="footer-credits">
+            <span>BY NUR ALISS ALISHA</span>
+            <span>@ALYSHHA</span>
+        </div>
+    </div>
+
+</body>
+</html>

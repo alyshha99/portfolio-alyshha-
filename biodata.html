@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio | Biodata</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts: Great Vibes & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom List Marker (Rubrik Item 4) */
+        ul.custom-list {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        /* Style untuk Anchor Link (Rubrik Item 3) */
+        .back-to-top {
+            display: inline-block;
+            margin-top: 20px;
+            color: #3e2723;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body id="top">
+
+    <!-- Header & Navigation Bar -->
+    <header style="display: flex; justify-content: space-between; align-items: center;">
+        
+        <!-- Tajuk Utama (Font Script) -->
+        <h1 style="font-family: 'Great Vibes', cursive; font-size: 38px; font-weight: normal; margin: 0; text-transform: none;">alyshha's portfolio</h1>
+
+        <!-- Paparan Tarikh & Jam (Scripting - Rubrik Item 8) -->
+        <div style="font-family: inherit; font-size: 13px; font-weight: bold; color: #3e2723; text-transform: uppercase; margin-top: 10px;">
+            🗓️ <span id="tarikh"></span> | ⏳ <span id="jam"></span>
+        </div>
+
+        <!-- Menu Navigasi (Local Links - Rubrik Item 3) -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="biodata.html" class="active">Biodata</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="family.html">Family</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Layout -->
+    <main>
+        <div class="search-container-bar">
+            <form onsubmit="cariSection(event)" class="search-box">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search section..." required>
+                <button type="submit" class="search-btn">🔍</button>
+            </form>
+        </div>
+        
+        <div class="hero-card" style="display: block; max-width: 850px; margin: 30px auto; padding: 30px;">
+            
+            <h2 style="font-family: 'Montserrat', sans-serif; color: #3e2723; text-align: center; margin-bottom: 20px; font-size: 28px;">About Me</h2>
+
+            <!-- Image Map Example (Rubrik Item 2) -->
+            <div style="text-align: center; margin-bottom: 20px;">
+                <img src="images/profile.jpg" usemap="#profilemap" alt="Profile Picture" style="width: 200px; border-radius: 10px; border: 3px solid #f8d7da;">
+                <map name="profilemap">
+                    <!-- Klik bahagian muka/profil untuk ke Instagram -->
+                    <area shape="rect" coords="0,0,200,200" alt="Instagram" href="https://www.instagram.com" target="_blank">
+                </map>
+                <p><small><i>*Hint: Klik pada gambar profil di atas untuk melawat Instagram saya (Image Map)!</i></small></p>
+            </div>
+
+            <!-- Jadual Biodata (Tables - Rubrik Item 5) -->
+            <table style="width: 100%; border-collapse: collapse; margin-top: 15px; font-family: 'Montserrat', sans-serif; color: #3e2723;">
+                <tr style="border-bottom: 1px solid #f8d7da;">
+                    <td style="padding: 12px; font-weight: bold; width: 35%;">Full Name:</td>
+                    <td style="padding: 12px;">Nur Aliss Alisha binti Zawawi</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #f8d7da;">
+                    <td style="padding: 12px; font-weight: bold;">Institution:</td>
+                    <!-- Abbreviation (Rubrik Item 1) -->
+                    <td style="padding: 12px;"><abbr title="Universiti Teknologi MARA">UiTM</abbr> (ID: 2024434644)</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #f8d7da;">
+                    <td style="padding: 12px; font-weight: bold;">Current Academic Level:</td>
+                    <!-- Superscript (Rubrik Item 1) -->
+                    <td style="padding: 12px;">1<sup>st</sup> Year Student (Semester 3)</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #f8d7da;">
+                    <td style="padding: 12px; font-weight: bold;">Program / Faculty:</td>
+                    <td style="padding: 12px;">IMD318 - Faculty of Information Management</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #f8d7da;">
+                    <td style="padding: 12px; font-weight: bold;">Motto:</td>
+                    <!-- Bold & Italic (Rubrik Item 1) -->
+                    <td style="padding: 12px;"><b><i>"A story still in the making."</i></b></td>
+                </tr>
+            </table>
+
+            <hr style="margin: 30px 0; border: 0; border-top: 1px solid #f8d7da;">
+
+            <!-- Unordered List dengan Custom Marker (Rubrik Item 4) -->
+            <h3 style="color: #3e2723; margin-bottom: 10px;">Personal Hobbies & Skills</h3>
+            <ul class="custom-list" style="color: #3e2723; font-family: 'Montserrat', sans-serif;">
+                <li>Graphic & Web Design</li>
+                <li>Digital Photography</li>
+                <li>Content Creation</li>
+            </ul>
+
+            <br>
+
+            <!-- Ordered List (Rubrik Item 4) -->
+            <h3 style="color: #3e2723; margin-bottom: 10px;">Top Languages Spoken</h3>
+            <ol style="color: #3e2723; font-family: 'Montserrat', sans-serif; padding-left: 20px;">
+                <li>Bahasa Melayu (Native)</li>
+                <li>English (Fluent)</li>
+            </ol>
+
+            <!-- Anchor Link (Rubrik Item 3) -->
+            <div style="text-align: center;">
+                <a href="#top" class="back-to-top">⬆️ Back to Top</a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Sticky Social Bar (W3Schools Style - Left Side) -->
+<div class="icon-bar">
+    <a href="https://www.instagram.com/_.alyshha" target="_blank" class="instagram" title="Follow Instagram">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram">
+    </a>
+    <a href="https://www.tiktok.com/@_alyshae" target="_blank" class="tiktok" title="Follow TikTok">
+        <img src="images/logo-tiktok.png" alt="TikTok">
+    </a>
+</div>
+<!-- Footer / Statement of Ownership -->
+<footer style="text-align: center; padding: 25px 0;">
+    <p>&copy; 2026 PORTFOLIO ALISS ALISHA . All Rights Reserved.</p>
+    <p><small>Last Updated: October 2026</small></p>
+</footer>
+
+    <!-- Script JavaScript untuk Jam & Tarikh -->
+    <script>
+        function kemaskiniMasa() {
+            const masaSekarang = new Date();
+            const pilihanTarikh = { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' };
+            const tarikhFormat = masaSekarang.toLocaleDateString('en-US', pilihanTarikh);
+            const jamFormat = masaSekarang.toLocaleTimeString('en-US', {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true
+            });
+
+            document.getElementById('tarikh').innerText = tarikhFormat;
+            document.getElementById('jam').innerText = jamFormat;
+        }
+
+        kemaskiniMasa();
+        setInterval(kemaskiniMasa, 1000);
+    </script>
+
+</body>
+</html>
